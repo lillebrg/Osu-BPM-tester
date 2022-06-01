@@ -22,8 +22,9 @@ namespace Osu__BPM_tester
     {
         public Page1()
         {
+            Counter c = new Counter();
             InitializeComponent();
-            txtCounter.Text = String.Format("you tapped {0} times overall, which is \n               this bpm");
+            txtCounter.Text = String.Format("you tapped {0} times overall, which is \n               this bpm", c._count);
         }
     }
 }

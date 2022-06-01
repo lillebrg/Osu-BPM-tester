@@ -22,7 +22,7 @@ namespace Osu__BPM_tester
     public partial class Counter : Page
     {
         private string I1, I2;
-        private int _count;
+        public int _count;
         private int time = 10;
         private DispatcherTimer Timer;
         public Counter()
@@ -31,13 +31,13 @@ namespace Osu__BPM_tester
             Timer = new DispatcherTimer();
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Tick += Time_Tick;
-            ButtonSelection b = new ButtonSelection();
-            b.inp1 = I1;
-            b.inp2 = I2;
+            //ButtonSelection b = new ButtonSelection();
+            //b.inp1 = I1;
+            //b.inp2 = I2;
 
             //if (I1 == "z")
             //{
-               
+
             //}
         }
         public Counter(string Inp1, string Inp2)
@@ -47,8 +47,8 @@ namespace Osu__BPM_tester
         private void Time_Tick(object sender, EventArgs e)
         {
             
-            if (time>0)
-            {
+            //if (time>0)
+            //{
                 if (time <= 6)
                 {
                     if (time%2==0)
@@ -68,11 +68,11 @@ namespace Osu__BPM_tester
                     txbTimer.Text = String.Format("00:0{0}:{1}", time / 60, time % 60);
                 }
 
-            }
-            else
-            {
-                Timer.Stop();
-            }
+            //}
+            //else
+            //{
+            //    Timer.Stop();
+            //}
 
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -88,8 +88,8 @@ namespace Osu__BPM_tester
                     Timer.Start();
                 }
             } while (time == 0);
-            ButtonSelection b = new ButtonSelection() ;
-            Counting.Content = new Page1();
+            txtarrow.Text = "Press the Go! button to reveal your test results :D";
+            //Counting.Content = new Page1();
         }
     }
 }

@@ -16,6 +16,7 @@
         <TextBox x:Name="tapbox" BorderThickness="0" HorizontalAlignment="Center" Margin="0,142,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" Height="241" SelectionTextBrush="Black" SelectionBrush="Black" Background="Black" BorderBrush="Black" TextChanged="TextBox_TextChanged"/>
         <TextBlock x:Name="txbTimer" Opacity="0" TextAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="144" Foreground="#FFFF2B2B"><Run Language="da-dk"/></TextBlock>
         <Frame x:Name="Counting"/>
-        
+        <Button x:Name="btn2Done" Content="Go!&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,348,0,0" VerticalAlignment="Top" Height="30" Width="90"/>
+
     </Grid>
 </Page>
