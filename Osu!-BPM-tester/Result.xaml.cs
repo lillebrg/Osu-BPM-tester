@@ -16,19 +16,14 @@ using System.Windows.Shapes;
 namespace Osu__BPM_tester
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page1 : Page
     {
-        public MainWindow()
+        public Page1()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("In osu! you have 2 inputs on your keyboard, to press the circles ingame. Therefore choose 2 keys on your keyboard that you wanna use!");
-            Main.Content = new ButtonSelection();
+            txtCounter.Text = String.Format("you tapped {0} times overall, which is \n               this bpm");
         }
     }
 }

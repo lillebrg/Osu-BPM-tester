@@ -11,6 +11,8 @@
     </Window.Background>
     <Grid>
         <TextBlock x:Name="TXTWelcome" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Height="138" Margin="0,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Foreground="White"><Run Text=" "/><Run Language="da-dk" Text=" "/><Run Text="                "/><Run Text=" "/><Run Text="Welcome!"/><LineBreak/><Run/><LineBreak/><Run Text="Test how fast you can tap in Osu!"/></TextBlock>
+        <Button Content="Test Yourself!" HorizontalAlignment="Center" Margin="0,334,0,0" VerticalAlignment="Top" Height="46" Width="100" Click="Button_Click"/>
+        <Frame x:Name="Main"/>
 
     </Grid>
 </Window>

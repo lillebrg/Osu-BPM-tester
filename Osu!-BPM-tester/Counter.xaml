@@ -1,0 +1,21 @@
+﻿<Page x:Class="Osu__BPM_tester.Counter"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Osu__BPM_tester"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+      Title="Counter">
+    <Page.Background>
+        <ImageBrush ImageSource="C:\Users\phst\source\repos\Osu!-BPM-tester\Osu!-BPM-tester\Images\1024px-Black_flag.svg.png"></ImageBrush>
+    </Page.Background>
+    <Grid>
+        <TextBlock x:Name="txtCounter" TextAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="96" Width="408" Foreground="#FFFF2B2B"><Run Language="da-dk" Text="You have 10 Seconds to tap as fast as you can!"/></TextBlock>
+        <TextBlock x:Name="txtarrow" TextAlignment="Center" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,383,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="87" Width="296" Foreground="White"><Run Text=" 🠕"/><LineBreak/><Run Text="press "/><Run Language="da-dk" Text="in the middle"/><LineBreak/><Run Text=" and tap the keys you assigned!"/></TextBlock>
+        <TextBox x:Name="tapbox" BorderThickness="0" HorizontalAlignment="Center" Margin="0,142,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" Height="241" SelectionTextBrush="Black" SelectionBrush="Black" Background="Black" BorderBrush="Black" TextChanged="TextBox_TextChanged"/>
+        <TextBlock x:Name="txbTimer" Opacity="0" TextAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="144" Foreground="#FFFF2B2B"><Run Language="da-dk"/></TextBlock>
+        <Frame x:Name="Counting"/>
+        
+    </Grid>
+</Page>
