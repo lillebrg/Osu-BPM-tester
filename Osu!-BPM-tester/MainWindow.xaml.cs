@@ -23,12 +23,16 @@ namespace Osu__BPM_tester
         public MainWindow()
         {
             InitializeComponent();
+            //this initialize thing is basically a method that loads when the page loads. so if you want anything to happen before the user can to anything, put it here
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        //command that triggers when the user presses the button. therefore called Button_Click ^
         {
             MessageBox.Show("In osu! you have 2 inputs on your keyboard, to press the circles ingame. Therefore choose 2 keys on your keyboard that you wanna use!");
-            Main.Content = new ButtonSelection();
+            //Messagebox.show is like an alertbox that appears in the middle of the screen. You cant contínue with the program before you close the messagebox ^
+            Main.Content = new ButtonSelection(); 
+            //this command uses the frame from MainWindow.xaml for help, so the program knows where the code came from and where it is going ^
         }
     }
 }

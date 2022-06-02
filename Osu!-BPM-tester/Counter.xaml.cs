@@ -22,7 +22,7 @@ namespace Osu__BPM_tester
     public partial class Counter : Page
     {
         private string I1, I2;
-        public int _count;
+        public double count;
         private int time = 10;
         private DispatcherTimer Timer;
         public Counter()
@@ -46,10 +46,10 @@ namespace Osu__BPM_tester
 
         private void Time_Tick(object sender, EventArgs e)
         {
-            
-            //if (time>0)
-            //{
-                if (time <= 6)
+
+            if (time > 0)
+            {
+                if (time <= 10)
                 {
                     if (time%2==0)
                     {
@@ -59,6 +59,7 @@ namespace Osu__BPM_tester
                     {
                         txbTimer.Foreground = Brushes.White;
                     }
+
                     time--;
                     txbTimer.Text = String.Format("00:0{0}:0{1}", time / 60, time % 60);
                 }
@@ -68,11 +69,11 @@ namespace Osu__BPM_tester
                     txbTimer.Text = String.Format("00:0{0}:{1}", time / 60, time % 60);
                 }
 
-            //}
-            //else
-            //{
-            //    Timer.Stop();
-            //}
+            }
+            else
+            {
+                Timer.Stop();
+            }
 
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -81,15 +82,18 @@ namespace Osu__BPM_tester
             {
                 if (Keyboard.IsKeyDown(Key.A) || Keyboard.IsKeyDown(Key.D))
                 {
-                   
-                    txtCounter.Text = _count++.ToString();
+                    Timer.Start();
+                    txtCounter.Text = count++.ToString();
                     txtarrow.Opacity = 0;
                     txbTimer.Opacity = 100;
-                    Timer.Start();
+                    
                 }
-            } while (time == 0);
-            txtarrow.Text = "Press the Go! button to reveal your test results :D";
-            //Counting.Content = new Page1();
+                if (time == 0)
+                {
+                    tapbox.Visibility = Visibility.Hidden;
+                    txtCounter.Text = $"You tapped '{count}' times, which means your avg bpm is {count / 4*6}!";
+                }
+            } while (time == -1);
         }
     }
 }
