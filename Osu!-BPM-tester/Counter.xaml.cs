@@ -31,9 +31,16 @@ namespace Osu__BPM_tester
             Timer = new DispatcherTimer();
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Tick += Time_Tick;
-            //ButtonSelection b = new ButtonSelection();
-            //b.inp1 = I1;
-            //b.inp2 = I2;
+
+            ButtonSelection b = new ButtonSelection();
+            //b.inp1 = b.inp1.ToUpper();
+            //b.inp2 = b.inp2.ToUpper();
+            if (b.inp1 == "q")
+            {
+                MessageBox.Show ("it worked!");
+            }
+            MessageBox.Show(b.inp1, b.inp2);
+
 
             //if (I1 == "z")
             //{

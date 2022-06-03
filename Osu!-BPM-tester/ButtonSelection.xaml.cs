@@ -27,12 +27,6 @@ namespace Osu__BPM_tester
             InitializeComponent();
         }
 
-        public ButtonSelection(string Inp1, string Inp2)
-        {
-            Inp1 = inp1;
-            Inp2 = inp2;
-        }
-
         public void btnDone_Click(object sender, RoutedEventArgs e)
         {
             inp1 = input1.Text;
