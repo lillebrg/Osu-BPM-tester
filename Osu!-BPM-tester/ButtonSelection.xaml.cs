@@ -25,13 +25,17 @@ namespace Osu__BPM_tester
         public ButtonSelection()
         {
             InitializeComponent();
+            //this initialize thing is basically a method that loads when the page loads. so if you want anything to happen before the user can to anything, put it here
+
         }
 
         public void btnDone_Click(object sender, RoutedEventArgs e)
         {
             inp1 = input1.Text;
             inp2 = input2.Text;
-            ButtonSelect.Content = new Counter();
+            ButtonSelect.Content = new Counter(inp1, inp2);
+            //this command uses the frame from MainWindow.xaml for help, so the program knows where the code came from and where it is going ^
+            //this time i added the to variables to go with the next pictures becuase i need to use them for the keybind system
         }
     }
 }
