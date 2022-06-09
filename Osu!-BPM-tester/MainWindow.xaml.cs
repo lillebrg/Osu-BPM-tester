@@ -31,7 +31,7 @@ namespace Osu__BPM_tester
         {
             MessageBox.Show("In osu! you have 2 inputs on your keyboard, to press the circles ingame. Therefore choose 2 keys on your keyboard that you wanna use!");
             //Messagebox.show is like an alertbox that appears in the middle of the screen. You cant contínue with the program before you close the messagebox ^
-            Main.Content = new ButtonSelection(); 
+            Main.Content = new Counter(); 
             //this command uses the frame from MainWindow.xaml for help, so the program knows where the code came from and where it is going ^
         }
     }
